@@ -12,11 +12,16 @@
  *
  */
 
+// Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "journal/variables";
 @import "bootstrap";
 @import "journal/bootswatch";
 
 @import "rails_bootstrap_forms";
+
+label.required:after {
+  content:" *";
+}
 
 main {
   margin-top: 20px;
