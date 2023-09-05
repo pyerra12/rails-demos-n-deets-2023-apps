@@ -21,9 +21,9 @@
         <td><%= basket_ball_player.height_inches/12 %>' <%= basket_ball_player.height_inches%12 %>'</td>
         <td><%= basket_ball_player.weight_lbs %> lbs.</td>
         <td>
-          <%= link_to "🔍︎", basket_ball_player_path(basket_ball_player) %>
-          <%= link_to '🖊', edit_basket_ball_player_path(basket_ball_player) %>
-          <%= link_to "🗑", basket_ball_player_path(basket_ball_player), data: { "turbo-method": :delete } %>
+          <%= link_to "🔍︎", basket_ball_player_path(basket_ball_player), class: "btn btn-link" %>
+          <%= link_to '🖊', edit_basket_ball_player_path(basket_ball_player), class: "btn btn-link" %>
+          <%= button_to "🗑", basket_ball_player_path(basket_ball_player), method: :delete, data: { turbo: false }, class: "btn btn-link", form_class: "d-inline" %>
         </td>
       </tr>
     <% end %>
