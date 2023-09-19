@@ -10,8 +10,7 @@
 #  updated_at  :datetime         not null
 #
 class Todo < ApplicationRecord
-
-    validates :title, presence: true
-    validates :due_date, presence: true
-    
+  validates :title, presence: true
+  validates :due_date, presence: true
+  validates_comparison_of :due_date, greater_than_or_equal_to: proc { Date.today }
 end
