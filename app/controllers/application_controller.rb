@@ -1,2 +1,9 @@
-class ApplicationController < ActionController::Base
+class PagesController < ActionController:
+
+  def home
+    render :home
+  end
+    
 end
+
+
